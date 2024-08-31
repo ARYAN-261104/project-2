@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+header nav {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header #cart-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background: #444;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+aside.filters {
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+aside.filters h2 {
+    margin-top: 0;
+}
+
+aside.filters label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+aside.filters input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+section.products {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+.cart-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.cart-popup.active {
+    transform: translateX(0);
+}
+
+#cart-popup ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-popup li {
+    margin-bottom: 10px;
+}
+
+#cart-popup button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#cart-popup button:hover {
+    background-color: #c82333;
+}
